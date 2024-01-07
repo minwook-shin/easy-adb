@@ -51,6 +51,12 @@ easy-adb provides the following features:
 
 This project is distributed under the LGPLv3 license. See the [LICENSE](LICENSE) file for details.
 
+## Disclaimer
+
+Please note that the easy-adb library does not take any responsibility for the download and use of the Android SDK Platform-Tools. 
+
+Users are responsible for ensuring that they download and use these tools in a manner that is in compliance with the terms and conditions set forth by the original provider. 
+
 ## Contact
 
 For bug reports about this project, please submit them through the GitHub issue tracker.
