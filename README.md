@@ -6,6 +6,9 @@ easy-adb is a tool written in Python that simplifies the use of Android Debug Br
 
 With this tool, you can easily perform tasks such as starting an ADB server, connecting to an Android device, and executing ADB commands using Python code.
 
+Important : This project does not contain any content from the Android SDK Platform-Tools. 
+Necessary libraries must be downloaded separately by the download_adb_binary command.
+
 ## Installation
 
 If Python >= 3.9 is installed, you can install easy-adb with the following command:
@@ -33,7 +36,7 @@ from easy_adb import run_adb_server, set_signer, connect_device, send_command, d
 
 # equivalent to: easy-adb --ip 192.168.0.1 --port=5555 --adb-command="getprop ro.product.model"
 
-download_adb_binary()
+# download_adb_binary()  # optional
 run_adb_server()
 test_device = connect_device(set_signer(), "192.168.0.1", 5555)
 result = send_command(test_device, "getprop ro.product.model")
