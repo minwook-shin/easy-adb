@@ -1,5 +1,11 @@
 # Release Notes
 
+## [0.0.3](https://pypi.org/project/easy-adb/0.0.3/) (2024-02-22)
+
+### New Features
+
+* Added option to accept terms boolean when console input is not possible
+
 ## [0.0.2](https://pypi.org/project/easy-adb/0.0.2/) (2024-02-21)
 
 ### New Features

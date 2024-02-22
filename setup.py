@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="easy-adb",
-    version="0.0.2",
+    version="0.0.3",
     description="Easy to use ADB commands in Python 3",
     long_description=long_description,
     long_description_content_type="text/markdown",

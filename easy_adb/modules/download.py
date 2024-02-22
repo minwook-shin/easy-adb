@@ -7,16 +7,20 @@ import requests
 from easy_adb.resource import agreement_file_path
 
 
-def __get_user_agreement():
+def __get_user_agreement(agreement):
     print(agreement_file_path)
     with open(agreement_file_path, "r") as agreement_file:
         print(agreement_file.read())
 
-    user_input = input(f"Do you agree to the terms in {agreement_file_path}? (y/n): ").lower()
+    if agreement is True:
+        print("Terms automatically accepted by code.")
+        user_input = "y"
+    else:
+        user_input = input(f"Do you agree to the terms in {agreement_file_path}? (y/n): ").lower()
     return user_input == "y"
 
 
-def download_adb_binary():
+def download_adb_binary(agreement: bool = False):
     home_directory = os.path.expanduser("~")
     binary_url = ""
     if platform.system() == "Darwin":
@@ -28,7 +32,7 @@ def download_adb_binary():
     download_path = os.path.join(home_directory, "platform-tools-latest-darwin.zip")
     extract_path = os.path.join(home_directory, "adb")
 
-    if not os.path.isdir(extract_path) and __get_user_agreement():
+    if not os.path.isdir(extract_path) and __get_user_agreement(agreement):
         b = requests.get(binary_url).content
         with open(download_path, 'wb') as f:
             f.write(b)
