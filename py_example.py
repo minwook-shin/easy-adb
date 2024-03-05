@@ -5,7 +5,7 @@ from easy_adb import run_adb_server, set_signer, connect_device, send_command, d
 download_adb_binary()
 run_adb_server()
 sign = set_signer()
-test_device = connect_device(sign, "192.168.0.1", 5555)
+test_device = connect_device(sign)
 result = send_command(test_device, "getprop ro.product.model")
 print(result)
 

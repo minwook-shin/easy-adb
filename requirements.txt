@@ -1,2 +1,2 @@
 requests == 2.31.0
-adb-shell== 0.4.4
+adb-shell[usb]== 0.4.4

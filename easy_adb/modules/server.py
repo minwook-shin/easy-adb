@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-from adb_shell.adb_device import AdbDeviceTcp
+from adb_shell.adb_device import AdbDeviceTcp, AdbDeviceUsb
 
 
 def run_adb_server():
@@ -16,7 +16,10 @@ def run_adb_server():
         print(f"Error starting ADB server: {e}")
 
 
-def connect_device(signer, wifi_ip='', wifi_port=5555):
-    device = AdbDeviceTcp(wifi_ip, wifi_port)
+def connect_device(signer, usb=True, wifi_ip='', wifi_port=5555):
+    if usb:
+        device = AdbDeviceUsb()
+    else:
+        device = AdbDeviceTcp(wifi_ip, wifi_port)
     device.connect(rsa_keys=[signer], auth_timeout_s=60)
     return device

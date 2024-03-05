@@ -1,5 +1,12 @@
 # Release Notes
 
+## [0.1.0](https://pypi.org/project/easy-adb/0.1.0/) (2024-03-05)
+
+### New Features
+
+* Added USB connection support
+
+
 ## [0.0.3](https://pypi.org/project/easy-adb/0.0.3/) (2024-02-22)
 
 ### New Features
