@@ -1,5 +1,9 @@
 # Release Notes
 
+## [0.1.1](https://pypi.org/project/easy-adb/0.1.0/) (2024-03-05)
+
+* Added missing USB dependency package
+
 ## [0.1.0](https://pypi.org/project/easy-adb/0.1.0/) (2024-03-05)
 
 ### New Features

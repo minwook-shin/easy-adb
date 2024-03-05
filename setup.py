@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="easy-adb",
-    version="0.1.0",
+    version="0.1.1",
     description="Easy to use ADB commands in Python 3",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -26,7 +26,7 @@ setup(
     license="LGPLv3",
     install_requires=[
         "requests==2.31.0",
-        "adb-shell== 0.4.4"
+        "adb-shell[usb]==0.4.4"
     ],
     python_requires=">=3.9",
     include_package_data=True,
